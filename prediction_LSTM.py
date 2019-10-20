@@ -93,7 +93,7 @@ def main():
     lstm = LSTM_Model()
     lstm.build()
     lstm.train_test(seqs)
-    return l.train_plot, l.test_plot
+    return lstm.train_plot, lstm.test_plot
 
 if __name__ == '__main__':
      main()
