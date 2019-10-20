@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[106]:
-
-
-# !pip3 install keras
-
-
-# In[1]:
-
 
 import pandas as pd
 import numpy as np
@@ -18,10 +7,6 @@ from keras.models import Sequential
 from keras.layers import LSTM, Dense, Activation
 from sklearn.model_selection import train_test_split
 
-
-# In[63]:
-
-
 n_epochs = 30
 time_steps = 10
 hidden_dim = 20
@@ -29,10 +14,6 @@ batch_size = 30
 pred_timesteps = 5
 activation = None
 loss = 'logcosh'
-
-
-# In[64]:
-
 
 def create_dataset(data, time_steps = time_steps):  
     # Scaling
@@ -47,10 +28,6 @@ def create_dataset(data, time_steps = time_steps):
         t = data[i: i + time_steps].squeeze()
         s = np.vstack((s, t))  
     return s, scaler
-
-
-# In[69]:
-
 
 class LSTM_Model():
     def __init__(self):
@@ -109,11 +86,6 @@ class LSTM_Model():
         plt.title(plot_name)
         plt.legend(['predict', 'true'])
         
-
-
-# In[70]:
-
-
 def main():
     a = pd.read_csv('weight_seq.csv')
     seqs, scaler = create_dataset(a)
@@ -123,48 +95,5 @@ def main():
     lstm.train_test(seqs)
     return l.train_plot, l.test_plot
 
-
-# In[71]:
-
-
 if __name__ == '__main__':
      main()
-
-
-# In[68]:
-
-
-try_model()
-
-
-# In[ ]:
-
-
-
-
-
-# In[57]:
-
-
-# import os
-# os.getcwd()
-
-
-# In[ ]:
-
-
-# n_epochs = 10 ?
-# time_steps = 10
-# hidden_dim = 20
-# batch_size = 30
-# pred_timesteps = 5
-# activation = None
-# loss = 'logcosh'
-# loss: 0.0039 - acc: 7.0972e-04 - val_loss: 0.0057 - val_acc: 0.0064
-
-
-# In[ ]:
-
-
-
-
