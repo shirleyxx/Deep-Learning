@@ -85,9 +85,6 @@ class LSTM_Model():
         plt.plot(y_true, color='cornflowerblue', linewidth=1)
         plt.title(plot_name)
         plt.legend(['predict', 'true'])
-        
-def main():
-
 
 if __name__ == '__main__':
     data = pd.read_csv('weight_seq.csv')
