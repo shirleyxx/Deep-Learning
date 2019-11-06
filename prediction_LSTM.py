@@ -87,13 +87,14 @@ class LSTM_Model():
         plt.legend(['predict', 'true'])
         
 def main():
-    a = pd.read_csv('weight_seq.csv')
-    seqs, scaler = create_dataset(a)
+
+
+if __name__ == '__main__':
+    data = pd.read_csv('weight_seq.csv')
+    seqs, scaler = create_dataset(data)
     
     lstm = LSTM_Model()
     lstm.build()
     lstm.train_test(seqs)
-    return lstm.train_plot, lstm.test_plot
-
-if __name__ == '__main__':
-     main()
+    lstm.train_plot
+    lstm.test_plot
