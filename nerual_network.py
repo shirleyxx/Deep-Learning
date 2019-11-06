@@ -268,11 +268,9 @@ def test_2():
     
     plt.imshow(matrix)
 
-def main():
+if __name__ == "__main__":
     test_0()
     test_1()
     test_2()
 
-if __name__ == "__main__":
-	main()
 
