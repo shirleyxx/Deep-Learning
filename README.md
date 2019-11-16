@@ -2,6 +2,6 @@
 
 Machine Learning & Deep Learning
 
-- Neurual Network
+- Neural Network
 - LSTM
 - Enhanced Naive Bayes
