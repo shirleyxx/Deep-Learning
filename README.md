@@ -2,6 +2,6 @@
 
 Machine Learning & Deep Learning
 
-- Neural Network
-- LSTM
-- Enhanced Naive Bayes Classifier
+- Neural Network from scratch
+- LSTM 
+- Enhanced Naive Bayes classifier
