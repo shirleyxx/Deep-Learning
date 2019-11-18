@@ -4,4 +4,4 @@ Machine Learning & Deep Learning
 
 - Neural Network
 - LSTM
-- Enhanced Naive Bayes
+- Enhanced Naive Bayes Classifier
