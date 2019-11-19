@@ -86,14 +86,14 @@ class NaiveBayes():
         ) -> float:
         # negtive log-likelyhood, prob(y|x)
         probs = posts.multiply(a).add(priors)
-        norm = scipy.special.logsumexp(output, axis=1)
+        norm = scipy.special.logsumexp(probs, axis=1)
         probs = probs.subtract(norm, axis=0)
         if sample_weights:
             probs = probs.multiply(sample_weights, axis=0)
         row_col = pd.DataFrame(data={"row":probs.index, "col":y}).dropna()
         return (-probs.lookup(row_col['row'], row_col['col'])).sum()
 
-if __name__="__mains__":
+if __name__=="__mains__":
     pass
 
     
