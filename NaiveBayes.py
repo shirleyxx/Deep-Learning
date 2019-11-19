@@ -93,7 +93,7 @@ class NaiveBayes():
         row_col = pd.DataFrame(data={"row":probs.index, "col":y}).dropna()
         return (-probs.lookup(row_col['row'], row_col['col'])).sum()
 
-if __name__=="__mains__":
+if __name__=="__main__":
     pass
 
     
